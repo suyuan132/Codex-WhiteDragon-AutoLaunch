@@ -10,7 +10,14 @@ $references = @('WPF/WindowsBase.dll','WPF/PresentationCore.dll','WPF/Presentati
 if ($LASTEXITCODE -ne 0) { throw 'Compilation failed.' }
 Copy-Item "$root/scripts","$root/*.cmd","$root/Diagnose-Codex.ps1","$root/LICENSE","$root/THIRD_PARTY_NOTICES.md" $output -Recurse -Force
 if (!(Test-Path "$output/launcher.json")) { Copy-Item "$root/launcher.json" $output }
+$video = Join-Path $root 'media/startup.mp4'
+$mediaOutput = Join-Path $output 'media'
+if ((Test-Path $video) -and !(Test-Path (Join-Path $mediaOutput 'startup.mp4'))) {
+    New-Item -ItemType Directory -Force $mediaOutput | Out-Null
+    Copy-Item -LiteralPath $video -Destination $mediaOutput
+}
 $result = Start-Process -FilePath $exe -ArgumentList '--self-test' -WindowStyle Hidden -Wait -PassThru
 if ($result.ExitCode -ne 0) { throw "Self-test failed. See $output/self-test-error.txt." }
 Get-Content "$output/qa/self-test.json"
+
 

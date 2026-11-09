@@ -10,11 +10,10 @@ Windows 上的非官方 Codex 启动器。它可在启动已安装的 Codex 桌�
 
 ```powershell
 powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\scripts\build.ps1
-powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\scripts\Import-Animation.ps1 -VideoPath "D:\Animations\startup.mp4"
 .\build\DragonCodexBoot\DragonCodexBoot.exe
 ```
 
-构建脚本会运行配置和窗口几何自测，并保留输出目录里已有的配置。公开配置的动画时间点与画面坐标需要按自备视频调整。请修改输出目录的 launcher.json 中的 HoldAt、TransitionStart、TransitionEnd 和 ScreenFrames。若客户端安装方式不同，可修改 AppLaunch 和进程匹配项。Diagnose-Codex.cmd 可查看本机识别结果。
+构建脚本会运行配置和窗口几何自测，并保留输出目录里已有的配置。构建时会复制随附启动视频。若要替换动画，可运行 scripts/Import-Animation.ps1 并用 -VideoPath 指定自己的 MP4，再按新视频调整时间点与画面坐标。请修改输出目录的 launcher.json 中的 HoldAt、TransitionStart、TransitionEnd 和 ScreenFrames。若客户端安装方式不同，可修改 AppLaunch 和进程匹配项。Diagnose-Codex.cmd 可查看本机识别结果。
 
 ## 快捷方式与本地数据
 
@@ -23,3 +22,4 @@ AutoReplaceEntrypoints 和 ScanAllLocalDrives 默认关闭。手动运行 Rescan
 ## 许可与声明
 
 项目沿用原有 MIT 许可证，详见 [LICENSE](LICENSE)。产品名称、平台依赖与自备素材的权利说明见 [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md)。
+

@@ -1,0 +1,11 @@
+/build/
+/dist/
+/logs/
+/qa/
+/self-test-error.txt
+*.exe
+*.mp4
+*.log
+*.backup-*
+.env*
+!/media/startup.mp4
