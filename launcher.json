@@ -1,0 +1,79 @@
+﻿{
+    "AutoReplaceEntrypoints":  false,
+    "ScanAllLocalDrives":  false,
+    "Video":  "media/startup.mp4",
+    "AppLaunch":  "shell:AppsFolder\\OpenAI.Codex_2p2nqsd0c76g0!App",
+    "ProcessPathContains":  "OpenAI.Codex_",
+    "ProcessNames":  [
+                         "ChatGPT",
+                         "Codex"
+                     ],
+    "HoldAt":  6.798458,
+    "TransitionStart":  8.049708,
+    "TransitionEnd":  9.75975,
+    "MaxWaitSeconds":  60,
+    "Volume":  1,
+    "PlayerWidth":  3840,
+    "PlayerHeight":  2160,
+    "MatchClientToPlayer":  true,
+    "ScreenFrames":  [
+                         {
+                             "Time":  8.049708,
+                             "X":  0.22857,
+                             "Y":  0.25977,
+                             "Width":  0.54505,
+                             "Height":  0.47656
+                         },
+                         {
+                             "Time":  8.25825,
+                             "X":  0.21648,
+                             "Y":  0.24805,
+                             "Width":  0.56703,
+                             "Height":  0.49414
+                         },
+                         {
+                             "Time":  8.5085,
+                             "X":  0.19011,
+                             "Y":  0.2168,
+                             "Width":  0.61758,
+                             "Height":  0.5625
+                         },
+                         {
+                             "Time":  8.75875,
+                             "X":  0.13407,
+                             "Y":  0.16992,
+                             "Width":  0.73077,
+                             "Height":  0.65625
+                         },
+                         {
+                             "Time":  9.009,
+                             "X":  0.06044,
+                             "Y":  0.09375,
+                             "Width":  0.87912,
+                             "Height":  0.82227
+                         },
+                         {
+                             "Time":  9.25925,
+                             "X":  0.0,
+                             "Y":  0.05078,
+                             "Width":  1.0,
+                             "Height":  0.90234
+                         },
+                         {
+                             "Time":  9.5095,
+                             "X":  0.0,
+                             "Y":  0.01562,
+                             "Width":  1.0,
+                             "Height":  0.96875
+                         },
+                         {
+                             "Time":  9.75975,
+                             "X":  0.0,
+                             "Y":  0.0,
+                             "Width":  1.0,
+                             "Height":  1.0
+                         }
+                     ],
+    "DisplayName":  "Dragon Codex Boot",
+    "FullscreenPlayback":  true
+}
